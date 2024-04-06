@@ -1,14 +1,11 @@
-/*
-Challenge:
-    1. Convert this function declaration to a function expression.
-*/
-
-const getTheftAlert = function(numberOfTransactionsHour) {
-    if (numberOfTransactionsHour > 5) {
-        return `You have made ${numberOfTransactionsHour} transactions 
-                in the past hour. We think your card might have been 
-                compromised`
-    }
+function speedWarning(speed){
+    return `You are going at ${speed} mph!`
 }
 
-console.log(getTheftAlert(6))
+console.log(speedWarning(40))
+
+/*
+Challenge
+1. Refactor this function to use an arrow function.
+2. Make sure you write the least code possible.
+*/
