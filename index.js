@@ -1,11 +1,10 @@
-const grades = [75, 83, 66, 43, 55, 99, 87, 16, 89, 64, 70, 80, 94, 77, 66, 73]
+import { studentsArr } from '/studentsArr.js'
 
-/*
-Challenge
-1. Use the .reduce() method to find the total of all of the students grades.
-2. Do some simple maths to log out the class average. 
-*/
-const totalGrades = grades.reduce((total, currentGrade) => total + currentGrade)
+function calculateClassAverage(studentsArr) {
+    const totalGrades = studentsArr.reduce(function(total, cStudents) {
+        return total + cStudents.grade
+    }, 0)
+    return totalGrades / studentsArr.length
+}
 
-const average = total / grades.length
-console.log(`The class average is ${average}`)
+console.log(calculateClassAverage(studentsArr))
