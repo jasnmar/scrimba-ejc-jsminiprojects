@@ -5,9 +5,7 @@ Challenge
 1. Use the .reduce() method to find the total of all of the students grades.
 2. Do some simple maths to log out the class average. 
 */
-const total = grades.reduce(function(total, current) {
-    return total+current
-})
+const totalGrades = grades.reduce((total, currentGrade) => total + currentGrade)
 
 const average = total / grades.length
 console.log(`The class average is ${average}`)
