@@ -1,22 +1,29 @@
-const dreamHoliday = {
-    destination: 'Cozumel',
-    activity: 'Scuba Diving',
-    accommodation: 'Cozumel Palace',
-    companion: 'Stephania'
-}
+import { playlistArr } from '/playlist.js'
 
-/* 
+/*
 Challenge
-1. Complete the object dreamHoliday with whatever
-   information is true for you. Feel free to add 
-   extra properties or change the existing ones. 
-2. Destructure the object and use the individual 
-   variables to log out one or more sentences about 
-   your dream holiday. 
-
-E.g. "I would love to go to Austin, Texas to visit the Tesla HQ. 
-     I'd sleep in a luxury ranch and hang out with Elon Musk all day."
+1. Refactor the code below to use .map() 
+   instead of the for loop.
+   ⚠️ Don't worry about the commas for now.
 */
-const {destination, activity, accommodation, companion} = dreamHoliday
 
-console.log(`I would love to go to ${destination} to go ${activity}. I'd stay at ${accommodation} and hang out with ${companion} all day`)
+const playlistHtml = playlistArr.map(function(song) {
+    return `<section class="card">
+    <div class="card-start">
+        <img src="/images/${song.albumArt}">
+    </div>
+        <div class="card-mid">
+            <h4 class="card-title">${song.title}</h4>
+            <p class="card-artist">${song.artist}</p>
+        </div>
+    <div class="card-end">
+        <p class="card-menu">...</p>
+    </div>
+</section>
+    `
+})
+
+
+
+
+document.getElementById('container').innerHTML = playlistHtml
