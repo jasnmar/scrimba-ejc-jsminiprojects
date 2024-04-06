@@ -1,29 +1,17 @@
-import { playlistArr } from '/playlist.js'
+const filmInput = document.getElementById('film-input')
+const addBtn = document.getElementById('add-btn')
+const filmList = document.getElementById('film-list')
 
+addBtn.addEventListener('click', function() {
 /*
-Challenge
-1. Refactor the code below to use .map() 
-   instead of the for loop.
-   ⚠️ Don't worry about the commas for now.
+Challenge:
+1. Find a way of adding an inputted film to the list 
+   which does not allow malicious JavaScript to be executed.
+2. Implement it. 
 */
-
-const playlistHtml = playlistArr.map(function(song) {
-    return `<section class="card">
-    <div class="card-start">
-        <img src="/images/${song.albumArt}">
-    </div>
-        <div class="card-mid">
-            <h4 class="card-title">${song.title}</h4>
-            <p class="card-artist">${song.artist}</p>
-        </div>
-    <div class="card-end">
-        <p class="card-menu">...</p>
-    </div>
-</section>
-    `
-}).join(' ')
-
-
-
-
-document.getElementById('container').innerHTML = playlistHtml
+    const filmDiv = document.createElement('div')
+    filmDiv.classList.add("film-item")
+    filmDiv.textContent = filmInput.value
+    filmList.appendChild(filmDiv)
+    filmInput.value = ''
+}) 
