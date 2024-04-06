@@ -1,6 +1,10 @@
-const speedWarning= speed => `You are going at ${speed} mph!`
+const speedWarning = (speedLimit, speed) => {
+    if(speed>speedLimit) {
+        return `You are going at ${speed} mph!`
+    }    
+}
 
-console.log(speedWarning(40))
+console.log(speedWarning(30, 40))
 
 /*
 Challenge
