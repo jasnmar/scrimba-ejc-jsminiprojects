@@ -1,8 +1,7 @@
 body {
-    background-color: #000000;
     margin: 0;
-    color: white;
-    font-size: 16px;
+    color: #333;
+    font-family: 'Poppins';
 }
 
 .container {
@@ -14,57 +13,39 @@ body {
 
 .card {
     display: flex;
-    justify-content: space-between;
-    background: #000000;
-    width: 100%; 
-    max-width: 300px;
-    padding: 0 11px;
-    box-sizing: border-box;
-    transition: box-shadow 0.3s ease;
-    margin: 0 20px 5px 20px;
+    min-width: 400px;
+    max-width: 450px;
+    box-shadow: 0px 0px 10px 1px #999;
+    margin: 0 20px 15px 20px;
     border-radius: 5px;
-}
-
-.card-start {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-height: 140px;
 }
 
 .card img {
-   width: 48px; 
-   border-radius: 5px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   height: 100%;
 }
-.card-mid {
+
+.card-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
     margin-left: 16px;
+    padding: 11px;
 }
 
-.card:hover {
-    box-shadow: 0 0px 15px rgba(255, 255, 255, .8);
-}
-
-h4.card-title {  
-    font-size: 17px;
+h2{  
+    font-size: 16px;
     margin: 0 0 3px 0;
 }
 
-.card-artist {
+h3{  
+    font-size: 12px;
+    margin: 0 0 3px 0;
+}
+
+p {
     font-size: 13px;
-    margin: 0;
-}
-
-.card-menu {
-    font-size: 21px;
-    color: #888888;
-    transform: rotate(90deg);
-    width: 21px;
-    cursor: pointer;
-}
-
-.card-menu:hover {
-    color: #ffffff;
+    margin: 5px 0 5px 0;
 }
