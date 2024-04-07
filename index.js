@@ -1,4 +1,18 @@
-function getLabelsHtml() {
+function getLabelsHtml(text, sender, ...names) {
+    let htmlString = ""
+    names.forEach(name => {
+        htmlString += `
+        <div class="label-card">
+            <p>Dear ${name.name} </p>
+            <p>${text}</p>
+            <p>Best wishes,</p>
+            <p>${sender}</p>
+        </div>`
+    })
+
+    return htmlString
+};
+ 
     /*
     Challenge:
     1. Add parameters.
@@ -13,7 +27,6 @@ function getLabelsHtml() {
     //     <p>Best wishes,</p>
     //     <p>${sender}</p>
     // </div>`
-    }
     
     const text = 'Thank you for all your hard work throughout the year! 🙏🎁'
     const sender = 'Tom'
