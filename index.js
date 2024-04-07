@@ -1,33 +1,66 @@
-const ageInput = document.getElementById('age')
-const resultDisplay = document.getElementById('result-display')
-const checkButton = document.getElementById('btn-check')
+import { menuArray } from "./data.js";
 
-//set minimum drinking and driving ages for a jurisdiction 
-const minDrinkAge = 16
-const minDriveAge = 18
+setupPage()
 
-//check button click event listener
-checkButton.addEventListener('click', function() {
-    let message = ''
-    const age = ageInput.value
-        // Age is below the minDrinkAge and minDriveAge
-        if (age < minDrinkAge && age < minDriveAge) {
-            message = `I'm sorry, you cannot drink or drive ⛔`
-        // Relevant to countries where minDrinkAge is less than minDriveAge
-        } else if (age >= minDrinkAge && age < minDriveAge) {
-            message = "You can drink 🍺 but you cannot drive"
-        // Relevant to countries where minDriveAge is less than minDrinkAge
-        } else if (age >= minDriveAge && age < minDrinkAge) {
-            message = "You can drive 🚗 but you cannot drink"
-        // Age is above the minDrinkAge and minDriveAge
-        } else {
-            message = "You can drink 🍺 and drive 🚗 (not at the same time though!)"
-        } 
-        renderMessage(message)
-})
+function setupPage() {
+    loadMenu();
 
-function renderMessage(message) {
-    resultDisplay.innerText = message
 }
 
+function loadMenu() {
+  const menuDiv = document.getElementById("menu")
+  menuArray.forEach(menuItem => {
+    const menuItemDiv = document.createElement('div')
+      menuItemDiv.classList.add("menuItem")
+      menuDiv.appendChild(menuItemDiv);
 
+        const emoji = document.createElement('p')
+          emoji.textContent = menuItem.emoji
+          emoji.classList.add('emoji')
+          menuItemDiv.appendChild(emoji)
+        const orderDiv = document.createElement('div')
+          orderDiv.classList.add('order')
+          menuItemDiv.appendChild(orderDiv)
+        const infoDiv = document.createElement('div')
+          const itemName = document.createElement('p')
+          itemName.classList.add('itemname')
+          itemName.textContent = menuItem.name
+          infoDiv.appendChild(itemName)
+                
+          const ingredientsP = document.createElement('p')
+          ingredientsP.classList.add("ingrediants")
+          ingredientsP.textContent = menuItem.ingredients.join(", ")
+          infoDiv.appendChild(ingredientsP)
+
+          const priceP = document.createElement('p')
+          priceP.classList.add('price')
+          priceP.textContent = "$"+menuItem.price;
+          infoDiv.appendChild(priceP)
+
+        orderDiv.appendChild(infoDiv)
+        const addToOrderBtn = document.createElement('button')
+          addToOrderBtn.classList.add('addbtn')
+          addToOrderBtn.dataset.id=menuItem.id
+          addToOrderBtn.addEventListener("click", addToOrder)
+            const plusSpan = document.createElement('span')
+            plusSpan.classList.add("plus")
+            plusSpan.textContent = "+"
+            addToOrderBtn.appendChild(plusSpan)
+        orderDiv.appendChild(addToOrderBtn)
+
+    });
+
+
+}
+
+function addToOrder(event) {
+    console.log(event.target)
+    const myMenuID = event.target.dataset.id || event.target.parentElement.dataset.id
+    console.log(myMenuID)
+}
+
+const itemsOrderedArray = []
+
+function addItemToOrder(itemID) {
+
+}
