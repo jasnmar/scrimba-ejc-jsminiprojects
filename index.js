@@ -12,3 +12,22 @@ Challenge:
 5. Check it’s working by creating several instances of 
    Character and adding items to their arrays.
 */
+
+function Character(name) {
+    this.name = name
+    this.collectedItemsArr = []
+    this.addItem = function(item) {
+        this.collectedItemsArr.push(item)
+        
+        const message = `
+        ${this.name} now has: ${this.collectedItemsArr.join()} `
+        console.log(message)    }
+}
+
+const john = new Character('john')
+john.addItem("sword")
+john.addItem("book")
+console.log(john)
+
+const anna = new Character('anna')
+console.log(anna)
