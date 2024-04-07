@@ -1,13 +1,30 @@
-const playerGuess = 8
-const correctAnswer = 6
-
-/*
-Challenge
-1. Now improve the functionality of this code by 
-   letting the player know if their guess was too high, 
-   too low, or exactly right.
-*/
-
-const message = playerGuess === correctAnswer ? 'Correct!' : playerGuess > correctAnswer ? "Too High" : "Too Low"
-
-console.log(message)
+function getLabelsHtml() {
+    /*
+    Challenge:
+    1. Add parameters.
+    2. Update the HTML template where you 
+       see **NAME**.
+    3. Return HTML template for each label.
+    */
+    
+    // `<div class="label-card">
+    //     <p>Dear **NAME** </p>
+    //     <p>${text}</p>
+    //     <p>Best wishes,</p>
+    //     <p>${sender}</p>
+    // </div>`
+    }
+    
+    const text = 'Thank you for all your hard work throughout the year! 🙏🎁'
+    const sender = 'Tom'
+    
+    document.getElementById('labels-container').innerHTML = getLabelsHtml(
+        text, 
+        sender, 
+        {name: 'Sally'}, 
+        {name: 'Mike'}, 
+        {name: 'Rob'}, 
+        {name: 'Harriet'}
+        ) 
+    
+    
