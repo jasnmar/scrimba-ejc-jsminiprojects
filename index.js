@@ -3,7 +3,7 @@ const swissBankPassCodesArr = [1234,5678,9876,3434]
 
 function authenticationCheck(passCode){
 
-    swissBankPassCodesArr.find((codes) => codes === passCode) && console.log(accountBalanceUsd)
+    swissBankPassCodesArr.includes(passCode) && console.log(accountBalanceUsd)
 /*
 Challenge:
 1. If the passcode passed into authenticationCheck 
