@@ -1,25 +1,67 @@
-html, body {
+body {
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
+    color: #333333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.labels-container {
+main {
+    width: 400px;
+    height: 400px;
+    border: 3px solid #5b3da2;
+    border-radius: 10px;
+    margin: 16px auto;
+    padding: 16px;
+    box-shadow: #26394d 0px 20px 30px -10px;
+    background-color: #cec4e2;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 8px;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: #5b3da2;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 32px auto;
+    width: 200px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 8px auto 24px auto;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 p {
-    margin: 8px;
-    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    width: 280px;
 }
 
-.label-card {
-    border-radius: 5px;
-    width: 250px;
-    padding: 5px 10px;
-    color: white;
-    background-color: dodgerblue;
+input[type=number] {
+    height: 37px;
+    width: 80px;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid #5b3da2;
+    padding-left: 10px;
 }
