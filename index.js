@@ -11,8 +11,8 @@ Challenge:
 3. Find the lowest number from the array 
    and store it in the const 'lowest'. 
 */
-    const highest = //???
-    const lowest = //???
+    const highest = Math.max(...arr)
+    const lowest = Math.min(...arr)
     console.log(`The highest average share price was ${highest}`)
     console.log(`The lowest average share price was ${lowest}`)
 }
@@ -22,4 +22,4 @@ Challenge:
 1. Call this function with one array holding 
    all of the data from the 4 arrays above.
 */
-findPriceExtremes()
+findPriceExtremes([...averageSharePriceByMonthQ1, ...averageSharePriceByMonthQ2, ...averageSharePriceByMonthQ3, ...averageSharePriceByMonthQ4])
