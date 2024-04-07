@@ -1,19 +1,13 @@
-const playerGuess = 3
-const correctAnswer = 3
+const playerGuess = 8
+const correctAnswer = 6
 
 /*
-Challenge 
-1. Refactor the if else statement to use a ternary operator.
+Challenge
+1. Now improve the functionality of this code by 
+   letting the player know if their guess was too high, 
+   too low, or exactly right.
 */
 
-// let message2 = ''
-// if (playerGuess === correctAnswer) {
-//     message = 'Correct!'
-// }
-// else {
-//     message = 'Wrong!'
-// }
-
-const message = playerGuess===correctAnswer ? "Correct" : "Wrong!"
+const message = playerGuess === correctAnswer ? 'Correct!' : playerGuess > correctAnswer ? "Too High" : "Too Low"
 
 console.log(message)
