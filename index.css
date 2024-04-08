@@ -2,20 +2,23 @@ body {
     margin: 0;
     font-family: 'Smythe';
     font-weight: 200;
-    
-    
 } 
 
 header {
     color: white;
     background-image: url('./images/ferks-guare-KEZdWfYD-ow-unsplash 1.jpg');
 }
+
 main {
-    padding: 0px 0px 0px 20px;
+    padding: 20px 0px 0px 20px;
+}
+
+footer {
+    margin-bottom: 50px;
 }
 
 h1 {
-    font-size: 31px;
+    font-size: 32px;
     letter-spacing: 2px;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -27,22 +30,30 @@ h2 {
     padding: 0px 0px 50px 20px;
     font-size: 22px;
 }
+
+ul {
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+    
+}
+
+
 p {
     margin: 0px;
 }
 
-.hidden {
-    display: none;
-}
 .menuItem {
     display: flex;
     margin-right: 20px;
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid #DEDEDE;
 }
+
 .emoji {
     font-size: 72px;
     margin: auto;
 }
+
 .order {
     width: 100%;
     display: flex;
@@ -50,18 +61,22 @@ p {
     align-content: center;
     padding: 50px 0px;
 }
+
 .itemname {
     margin: 0px 0px 0px 0px;
     font-size: 28px;
 }
+
 .ingrediants {
     margin: 0px 0px 0px 0px;
     font-size: 16px;
 }
+
 .price {
     margin: 0px 0px 0px 0px;
     font-size: 20px;
 }
+
 .addbtn {
     border-radius: 50%;
     border: 1px solid #DEDEDE;
@@ -75,11 +90,96 @@ p {
 .addbtn:hover {
     box-shadow: 0px 0px 10px #DEDEDE;
 }
+
 .plus {
     font-size: 32px;
     font-family: 'Inter';
-    font-weight: 200;
     margin: 0px;
     line-height: 20px;
+}
 
+.orderheader {
+    margin: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.orderline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+}
+
+.total {
+    border-top: 2px solid #393333;
+    margin-top: 20px;
+    padding: 20px 0px 0px 0px;
+}
+
+.removebtn {
+    margin: 0px 10px;
+    border: none;
+    background-color: transparent;
+    color:#BBBBBB;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.action-button {
+    background-color: #16DB99;
+    width: auto;
+    padding: 20px;
+    margin-top: 20px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+}
+
+.full-width {
+    width:100%;
+}
+
+.pay-internal {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 100px black;
+    border-radius: 4px;
+}
+
+.card-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: bold;
+    margin: 20px;
+}
+.pay-input {
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border: 1px solid #DEDEDE;
+}
+.thank-you {
+    color: #065F46;
+    background-color: #ECFDF5;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px
+}
+
+#currentorder {
+    padding-right:20px;
+}
+
+.hidden {
+    display: none
 }

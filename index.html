@@ -21,9 +21,21 @@
         <div id="menu">
         </div>
         <div id="currentorder">
-            
         </div>
     </main>
+    <footer>
+
+    </footer>
+    <form onsubmit="return false" class="hidden" id="pay-modal">
+        <div class="pay-internal">
+
+            <p class="card-title">Enter card details</p>
+            <input type="text" class="pay-input" id="pay-name" name="personname" placeholder="Enter your name" required>
+            <input type="text" class="pay-input" name="cc" placeholder="Enter card number" required>
+            <input type="password" class="pay-input" name="ccv" placeholder="enter CVV" required>
+            <button type="submit" id="pay-btn" class="pay-input action-button">Pay</button>
+        </div>
+    </form>
     <script src="index.js" type="module"></script>
 </body>
 </html>
