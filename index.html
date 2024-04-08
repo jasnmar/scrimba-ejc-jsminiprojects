@@ -7,19 +7,35 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <div>
+            <h1>Jimmy's Diner</h1>
+            <h2>The best burgers and pizzas in town</h2>
+        </div>
+    </header>
     <main>
-        <h1>Can I drink or drive?</h1>
-        <div class="input-container">  
-            <label for="age">How old are you?</label>
-            <input type="number" id="age" name="age"/>
-        </div>        
-        <button id="btn-check">Check</button>          
-        <p id="result-display"></p>
+        <div id="menu">
+        </div>
+        <div id="currentorder">
+        </div>
     </main>
-    <script src="index.js"></script>
+    <footer>
+
+    </footer>
+    <form onsubmit="return false" class="hidden" id="pay-modal">
+        <div class="pay-internal">
+
+            <p class="card-title">Enter card details</p>
+            <input type="text" class="pay-input" id="pay-name" name="personname" placeholder="Enter your name" required>
+            <input type="text" class="pay-input" name="cc" placeholder="Enter card number" required>
+            <input type="password" class="pay-input" name="ccv" placeholder="enter CVV" required>
+            <button type="submit" id="pay-btn" class="pay-input action-button">Pay</button>
+        </div>
+    </form>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
