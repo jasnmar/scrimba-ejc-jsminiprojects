@@ -12,15 +12,22 @@ setupPage()
 
 function setupPage() {
   loadMenu();
+  const payModal = document.getElementById("pay-modal");
   //Event listener on the submit payment form
   payForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    const payModal = document.getElementById("pay-modal");
     itemsOrderedArray = [];
     payModal.classList.add("hidden");
     payFormName = new FormData(payForm).get("personname");
     renderThankYou();
   });
+  const pfCancelBtn = document.getElementById("pay-cancel-btn")
+  pfCancelBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    payModal.classList.add('hidden')
+    renderOrder()
+
+  })
 
 }
 
@@ -41,7 +48,7 @@ function loadMenu() {
   menuArray.forEach(menuItem => {
     //Create a div for that itme
     const menuItemDiv = document.createElement('div')
-      menuItemDiv.classList.add("menuItem")
+      menuItemDiv.classList.add("menu-item")
       menuDiv.appendChild(menuItemDiv);
         //add the "image" for the menu item
         const emoji = document.createElement('p')

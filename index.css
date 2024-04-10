@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: 'Smythe';
     font-weight: 200;
+    max-width: 640px;
+    margin: 0 auto;
 } 
 
 header {
@@ -43,7 +45,7 @@ p {
     margin: 0px;
 }
 
-.menuItem {
+.menu-item {
     display: flex;
     margin-right: 20px;
     border-bottom: 1px solid #DEDEDE;
@@ -143,6 +145,7 @@ p {
 }
 
 .pay-internal {
+    max-width: 640px;
     text-align: center;
     width: 80%;
     display: flex;
@@ -156,6 +159,20 @@ p {
     background-color: white;
     box-shadow: 0px 0px 100px black;
     border-radius: 4px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+}
+
+.cancel-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 2px solid #DEDEDE;
+    background-color: transparent;
+    border-radius: 50%;
 }
 
 .card-title {
